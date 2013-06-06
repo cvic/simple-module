@@ -10,13 +10,12 @@ Simple::Module - The great new Simple::Module!
 
 =head1 VERSION
 
-Version 0.01
 
 =cut
 
 use lib "../lib";
 use Simple::Module::Constants qw($DEBUG);
-our $VERSION = "0.9";
+our $VERSION = "0.01";
 
 
 BEGIN{
