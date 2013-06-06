@@ -23,7 +23,7 @@ my $full_path = can_run('openssl') or warn 'openssl is not installed!';
 #print "\n";
 # Our own shiny module
 use lib 'lib';
-use Simple::Module qw/foo/;
+use Simple::Module qw/function1 function2/;
 use Simple::Module::Constants qw/$DEBUG/;
 
 my $server = $ARGV[0];
