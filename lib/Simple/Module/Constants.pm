@@ -1,12 +1,12 @@
-package Simple::Module;
+package Simple::Module::Constants;
 
-use 5.006;
+use 5.010;
 use strict;
 use warnings FATAL => 'all';
 
 =head1 NAME
 
-Simple::Module - The great new Simple::Module!
+XPL::Dashboard::Constants - The great new XPL::Dashboard::Constants!
 
 =head1 VERSION
 
@@ -14,27 +14,36 @@ Version 0.01
 
 =cut
 
-use lib "../lib";
-use Simple::Module::Constants qw($DEBUG);
 our $VERSION = "0.9";
 
+#use base 'Exporter';
+
+use Readonly;
 
 BEGIN{
         use Exporter();
         our @ISA    = qw(Exporter);
-        our @EXPORT = qw(function1 function2);
+        our @EXPORT = qw($DEBUG);
 }
+
+
+Readonly::Scalar our $DEBUG => 1;
+
 
 
 =head1 SYNOPSIS
 
 Quick summary of what the module does.
 
+
+Docs here 
+http://stackoverflow.com/questions/1451085/how-can-i-define-constants-in-a-separate-file-in-perl
+
 Perhaps a little code snippet.
 
-    use Simple::Module;
+    use Simple::Module::Constants;
 
-    my $foo = Simple::Module->new();
+    my $foo = Simple::Module::Constants->new();
     ...
 
 =head1 EXPORT
@@ -48,25 +57,14 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =cut
 
-sub function1 {
-	return $DEBUG;
-}
-
-=head2 function2
-
 =cut
-
-sub function2 {
-}
-
-=head1 AUTHOR
 
 Vic, C<< <vic at localhost> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-simple-module at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Simple-Module>.  I will be notified, and then you'll
+Please report any bugs or feature requests to C<bug-xpl-dashboard-constants at rt.cpan.org>, or through
+the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=XPL-Dashboard-Constants>.  I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
 
 
@@ -76,7 +74,7 @@ automatically be notified of progress on your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Simple::Module
+    perldoc Simple::Module::Constants
 
 
 You can also look for information at:
@@ -85,19 +83,19 @@ You can also look for information at:
 
 =item * RT: CPAN's request tracker (report bugs here)
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Simple-Module>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=XPL-Dashboard-Constants>
 
 =item * AnnoCPAN: Annotated CPAN documentation
 
-L<http://annocpan.org/dist/Simple-Module>
+L<http://annocpan.org/dist/XPL-Dashboard-Constants>
 
 =item * CPAN Ratings
 
-L<http://cpanratings.perl.org/d/Simple-Module>
+L<http://cpanratings.perl.org/d/XPL-Dashboard-Constants>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/Simple-Module/>
+L<http://search.cpan.org/dist/XPL-Dashboard-Constants/>
 
 =back
 
@@ -148,4 +146,4 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
 
-1; # End of Simple::Module
+1; # End of Simple::Module::Constants
