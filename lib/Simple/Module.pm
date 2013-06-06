@@ -1,6 +1,6 @@
 package Simple::Module;
 
-use 5.006;
+use 5.010;
 use strict;
 use warnings FATAL => 'all';
 
@@ -50,13 +50,6 @@ if you don't export anything, such as for a purely object-oriented module.
 
 sub function1 {
 	return $DEBUG;
-}
-
-=head2 function2
-
-=cut
-
-sub function2 {
 }
 
 =head1 AUTHOR

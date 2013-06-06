@@ -27,7 +27,7 @@ BEGIN{
 }
 
 
-Readonly::Scalar our $DEBUG => 1;
+Readonly::Scalar our $DEBUG => 42;
 
 
 
